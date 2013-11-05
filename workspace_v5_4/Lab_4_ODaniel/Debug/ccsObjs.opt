@@ -1,0 +1,1 @@
+"./lcd_lib.obj" "./lab_4.obj" -l"libc.a" "../lnk_msp430g2553.cmd" 
