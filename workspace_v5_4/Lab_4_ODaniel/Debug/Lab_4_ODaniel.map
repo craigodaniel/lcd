@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v4.1.5                      
 ******************************************************************************
->> Linked Tue Nov 05 15:52:48 2013
+>> Linked Tue Nov 05 16:34:33 2013
 
 OUTPUT FILE NAME:   <Lab_4_ODaniel.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 0000c2d2
@@ -19,7 +19,7 @@ MEMORY CONFIGURATION
   INFOC                 00001040   00000040  00000000  00000040  RWIX
   INFOB                 00001080   00000040  00000000  00000040  RWIX
   INFOA                 000010c0   00000040  00000000  00000040  RWIX
-  FLASH                 0000c000   00003fe0  000003fb  00003be5  RWIX
+  FLASH                 0000c000   00003fe0  000003fd  00003be3  RWIX
   INT00                 0000ffe0   00000002  00000000  00000002  RWIX
   INT01                 0000ffe2   00000002  00000000  00000002  RWIX
   INT02                 0000ffe4   00000002  00000000  00000002  RWIX
@@ -86,16 +86,16 @@ section   page    origin      length       input sections
                   0000c39c    00000004     rts430_eabi.lib : pre_init.obj (.text:_system_pre_init)
                   0000c3a0    00000004                     : exit.obj (.text:abort)
 
-.const     0    0000c3a4    00000049     
-                  0000c3a4    00000029     lab_4.obj (.const:.string:$P$T1$2)
-                  0000c3cd    00000001     --HOLE-- [fill = 0]
-                  0000c3ce    0000001f     lab_4.obj (.const:.string:$P$T0$1)
+.const     0    0000c3a4    0000004b     
+                  0000c3a4    0000002b     lab_4.obj (.const:.string:$P$T1$2)
+                  0000c3cf    00000001     --HOLE-- [fill = 0]
+                  0000c3d0    0000001f     lab_4.obj (.const:.string:$P$T0$1)
 
-.cinit     0    0000c3ee    0000000e     
-                  0000c3ee    00000005     (.cinit..data.load) [load image]
-                  0000c3f3    00000001     --HOLE-- [fill = 0]
-                  0000c3f4    00000004     (__TI_handler_table)
-                  0000c3f8    00000004     (__TI_cinit_table)
+.cinit     0    0000c3f0    0000000e     
+                  0000c3f0    00000005     (.cinit..data.load) [load image]
+                  0000c3f5    00000001     --HOLE-- [fill = 0]
+                  0000c3f6    00000004     (__TI_handler_table)
+                  0000c3fa    00000004     (__TI_cinit_table)
 
 .reset     0    0000fffe    00000002     
                   0000fffe    00000002     rts430_eabi.lib : boot.obj (.reset)
@@ -103,13 +103,13 @@ section   page    origin      length       input sections
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 0000c3f8 records: 1, size/record: 4, table size: 4
-	.data: load addr=0000c3ee, load size=00000005 bytes, run addr=00000200, run size=00000001 bytes, compression=copy
+__TI_cinit_table @ 0000c3fa records: 1, size/record: 4, table size: 4
+	.data: load addr=0000c3f0, load size=00000005 bytes, run addr=00000200, run size=00000001 bytes, compression=copy
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 0000c3f4 records: 2, size/record: 2, table size: 4
+__TI_handler_table @ 0000c3f6 records: 2, size/record: 2, table size: 4
 	index: 0, handler: __TI_decompress_rle24
 	index: 1, handler: __TI_decompress_none
 
@@ -220,10 +220,10 @@ address    name
 00000120   WDTCTL
 00000400   __STACK_END
 00000050   __STACK_SIZE
-0000c3f8   __TI_CINIT_Base
-0000c3fc   __TI_CINIT_Limit
-0000c3f4   __TI_Handler_Table_Base
-0000c3f8   __TI_Handler_Table_Limit
+0000c3fa   __TI_CINIT_Base
+0000c3fe   __TI_CINIT_Limit
+0000c3f6   __TI_Handler_Table_Base
+0000c3fa   __TI_Handler_Table_Limit
 UNDEFED    __TI_INITARRAY_Base
 UNDEFED    __TI_INITARRAY_Limit
 00000001   __TI_args_main
@@ -434,10 +434,10 @@ address    name
 0000c39c   _system_pre_init
 0000c3a0   C$$EXIT
 0000c3a0   abort
-0000c3f4   __TI_Handler_Table_Base
-0000c3f8   __TI_CINIT_Base
-0000c3f8   __TI_Handler_Table_Limit
-0000c3fc   __TI_CINIT_Limit
+0000c3f6   __TI_Handler_Table_Base
+0000c3fa   __TI_CINIT_Base
+0000c3fa   __TI_Handler_Table_Limit
+0000c3fe   __TI_CINIT_Limit
 0000fffe   _reset_vector
 ffffffff   __binit__
 ffffffff   __c_args__

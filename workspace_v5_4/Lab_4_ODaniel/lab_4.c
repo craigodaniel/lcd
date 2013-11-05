@@ -11,7 +11,7 @@
 int main(void){
 	WDTCTL = WDTPW | WDTHOLD;
 			char message[] = "ECE 382 is my favorite class! ";
-			char message2[]= "Remember, remember the 5th of November. ";
+			char message2[]= "I got 99 problems... but a git ain't one. ";
 			initSPI();
 			LCDinit();
 			LCDclear();
